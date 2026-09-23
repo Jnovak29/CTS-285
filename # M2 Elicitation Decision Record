@@ -1,0 +1,45 @@
+# M2 Elicitation Decision Record
+
+## Investigation Path
+1. What do parents or teachers need to understand about learner activity?
+   Evidence revealed: Adults want to understand what the learner practiced and whether progress is occurring, but stakeholders have not yet agreed on a detailed reporting dashboard.
+2. What does “modern” need to mean from a user perspective?
+   Evidence revealed: Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens. They do not specify a visual style or framework.
+3. What exactly do stakeholders mean by “students shouldn’t lose their work”?
+   Evidence revealed: Teachers report that students may pause practice and return later. They want a learner’s saved practice state to remain available after leaving and returning to the application.
+
+## Initial Position
+**Supported evidence:**
+I know that the stakeholders would like some kind of way to track the progress of the learner. The stakeholders would like the "modernized DataMan to work in a browser window as well they would like the app to be user friendly with little instruction needed. They would also like a way to save the progress of the learner so the user can return to it later.
+
+**Remaining uncertainty:**
+What sort of reporting dashboard they would like to have, or how detailed they would like it.
+How they would like the learner's information stored. whether it should be saved to a login or another way.
+what kind of style / framework they would like to use.
+
+**Likely functional requirement:**
+A likely function is to create a user login for the application. Most likely needed to incorporate a way to save progress so they can return later to the application and most likely needed for a report dashboard for those overseeing.
+
+**Likely non-functional requirement / quality constraint:**
+popup windows. seeing as they would like to be as user friendly as possible and do not want the students/learner to have to click through many different screens making navigating easier.
+
+**Assumption or proposed solution I am not treating as confirmed:**
+That they do not want any sort of manual.
+
+**Why my initial position is defensible:**
+With the information that I have been given what i have proposed should work for what they are asking for.
+
+## Complication
+Students may use DataMan on school Chromebooks, phones, tablets, and home computers. Some sessions may be interrupted before intentional sign-out.
+
+**What this affects:**
+The use of multiple devices I took into consideration so I would make the application device friendly, as for interruption we could have an auto saving feature incorporated into the application
+
+**What I revised, if anything:**
+The way that the progress would be saved.
+
+**Final decision and reasoning:**
+Revise as new complications have been identified, initial proposal is insufficient.
+
+## Next Project Action
+Use this evidence to update the DataMan Requirements Register and preserve any unresolved questions as open assumptions or follow-up items.
