@@ -1,85 +1,153 @@
-Who receives the value? [Student] 
-What capability or outcome is actually needed? [a feature that will give feedback, so student gets information on whether to try again or answer is correct]
-Why does that capability matter? [Feature matters for better user engagment]
-
-
 # DataMan Product Backlog
-> Replace every bracketed prompt with your own work. Delete the prompts, this note,
-and any unused story blocks before you submit.
-> Save this file as `docs/product-backlog.md`. Use that exact folder, file name,
-and lowercase spelling.
+
+> Replace every bracketed prompt with your own work. Delete the prompts, this note, and any unused story blocks before you submit.
+> Save this file as `docs/product-backlog.md`. Use that exact folder, file name, and lowercase spelling.
+
 ## Sources
+
 This backlog uses these files from my repository:
+
 - `docs/requirements.md`
 - `docs/decisions/m3-backlog-triage-record.md`
 - `docs/decisions/m3-product-owner-decision-record.md`
-[If you revised `docs/requirements.md` after Module 2, state that here in one
-sentence.]
+
+[If you revised `docs/requirements.md` after Module 2, state that here in one sentence.]
+
 ## Priority Order
-List every story ID from highest priority to lowest. The story blocks below must
-appear in this same order.
-1. [US-__]
-2. [US-__]
-3. [US-__]
-4. [US-__]
+
+List every story ID from highest priority to lowest. The story blocks below must appear in this same order.
+
+1. [US-_01_]
+2. [US-_02_]
+3. [US-_03_]
+4. [US-_04_]
+
 ## Stories
-<!-- Copy one story block for each story. Do not change the field labels. -->
-### US-01 — [Short title]
-**Requirement ID:** [FR-__ or NFR-__ from `docs/requirements.md`. If the story
-traces to more than one requirement, list each ID.]
-**User Story:** As a [user or role], I want [capability or outcome] so that [value
-or reason].
+
+### US-01 — [ Monitoring ]
+
+**Requirement ID:** [FR-01 or NFR-__ from `docs/requirements.md`. If the story traces to more than one requirement, list each ID.]
+
+**User Story:** As a [ leaner ], I want [ DataMan to track my activities and progress] so that [I can see if I am making progress. ]
+
 **Acceptance Criteria:**
-- Given [starting condition], when [action or event], then [observable result].
-- [Write one line for each condition. Each line must state a result that another
-person can see and check.]
-**Relative Effort:** [S / M / L] — [One sentence. Compare this story to the other
-stories in this backlog, not to hours or days.]
-**Dependency / Constraint:** [The story, decision, or constraint that must exist
-first. Write "None" if there is none.]
-**Priority:** [Rank number from the Priority Order list.]
-**Readiness:** [Move Forward / Refine / Defer]
-**Priority Rationale:** [Why this rank is defensible. Name the factors you used:
-value, effort, dependency, risk, uncertainty, or stakeholder need.]
+
+- Given [A learner completes a activity], when [learner or other user views progress] then [the activity is displayed as completed].
+
+- [Write one line for each condition. Each line must state a result that another person can see and check.]
+- Given [A learner completes a activity]
+- When [learner or other user views progress]
+- Then [the activity is displayed as completed]
+
+
+**Relative Effort:** [S / M / L] — [ Effort - M. the difficulty lies in tracking, storing and display, It is more complex then basic interface updates but less complex then analytic features.]
+
+**Dependency / Constraint:** [None]
+
+**Priority:** [Rank 1]
+
+**Readiness:** [Move Forward]
+
+**Priority Rationale:** [ The story delivers alot of value by providing visibilty into progress. It has low implementation effort and no dependencies, supports possible other features that may rely on progress tracking.]
+
 ---
-### US-02 — [Short title]
-**Requirement ID:** [FR-__ / NFR-__]
-**User Story:** As a [user or role], I want [capability or outcome] so that [value
-or reason].
+
+### US-02 — [Browser Interface]
+
+**Requirement ID:** [FR-02 / NFR-__]
+
+**User Story:** As a [learner], I want [DataMan to be easy to navigate in a browers window.] so that [I can navigate with out trouble].
+
 **Acceptance Criteria:**
-- Given [starting condition], when [action or event], then [observable result].
-**Relative Effort:** [S / M / L] — [comparison]
-**Dependency / Constraint:** [dependency, constraint, or None]
-**Priority:** [rank]
-**Readiness:** [Move Forward / Refine / Defer]
-**Priority Rationale:** [reason]
+
+- Given [a learner opens DataMan in a supported browser], when [the application loads], then [all navigation is visible and functions].
+
+**Relative Effort:** [S / M / L] — [Effort - S. This story is primarily interface design and browser usuability, less complex then other stories that require storing or synchronizing]
+
+**Dependency / Constraint:** [None]
+
+**Priority:** [rank 2]
+
+**Readiness:** [Move Forward]
+
+**Priority Rationale:** [Ease of use is important for adoption and satisfaction, doing so provides a significant value, Us-01 is more foundational so I rank this story slightly lower.]
+
 ---
-<!-- A non-functional requirement (NFR) can become its own story. It can also
-become a constraint or an acceptance criterion on another story. If you use it as a
-constraint, put its ID in that story's Requirement ID field. -->
+
+### US-03 — [ Auto-Save ]
+
+**Requirement ID:** [ FR-03 ]
+
+**User Story:** As a [ learner ], I want [DataMan to automatically save progress] so that [I can pick up where i left off. ]
+
+**Acceptance Criteria:**
+
+- Given [a learner is working on a activity], when [progress is made] then [the system will automatically save the learners progress].
+- Given [A learner is working on a activity]
+- When [Progress is made]
+- Then [The system will automatically save learner progress]
+
+
+**Relative Effort:** [S / M / L] — [ Effort - L -- This story is more complex when tracking and interfacing storyies, It requires automatic data persistence, retreaval and synchronization across all sessions and devices.]
+
+**Dependency / Constraint:** [Progress tracking and data storage must exist before data can be saved or restored.]
+
+**Priority:** [Rank 3]
+
+**Readiness:** [Move Forward]
+
+**Priority Rationale:** [This story provides alot of value by preventing lost work and supports cross-devices. However it depends on other features, making it a lower priority.]
+
+---
+
+### US-04 — [ Consistency on devices ]
+
+**Requirement ID:** [ FR-04 ]
+
+**User Story:** As a [ learner ], I want [DataMan to provide a consistent experience across all devices] so that [I can use the system effeciently no matter what I am using. ]
+
+**Acceptance Criteria:**
+
+- Given [a learner accesses DataMan on different devices], when [the application loads] then [the same core features are available].
+- Given [a learner accesses DataMan on different devices]
+- When [the application loads]
+- Then [the same core features are avaiable.]
+
+
+**Relative Effort:** [S / M / L] — [ Effort - L -- This story requires testing and support on multiple devices and screens, making extremely complex.]
+
+**Dependency / Constraint:** [depends on FR-01 and FR-03]
+
+**Priority:** [Rank 4]
+
+**Readiness:** [Move Forward]
+
+**Priority Rationale:** [It is important for usability and accessibility, but relies on core functions being available first. this is why it is a lower priority.]
+
+---
+
 ## Open Questions Carried Forward
-List each open question or assumption from `docs/requirements.md` that affects this
-backlog. Do not turn an unresolved question into a confirmed story.
-- **[Q-__]:** [Which story waits on this question, or why no story exists for it
-yet.]
+
+List each open question or assumption from `docs/requirements.md` that affects this backlog. Do not turn an unresolved question into a confirmed story.
+
+- **[Q-01]:** [The layout for the reporting dashboard still needs to be clarified with stakeholders. reporting and display progress may require refinement.]
+- **[Q-02]:** [The method for storing learner progress has not been determined. Us-03 depends on this dicision. method affects how progress is saved and restored.]
+
 ## Revisions After Triage and Release Planning
-State what changed in this backlog because of your triage record and your Product
-Owner decision record.
-- [Story ID — what changed — which record caused the change.]
-- [If nothing changed, say so, and say why the original decision still holds.]
+
+State what changed in this backlog because of your triage record and your Product Owner decision record.
+- [No changes were made, the original priorites, dependencie. and all other estimates still align with stakeholder needs and goals.]
+
+
 ## Before You Submit
+
 - [ ] The file path is exactly `docs/product-backlog.md`.
 - [ ] All bracketed prompts and unused story blocks are deleted.
-- [ ] Every story has all eight required fields: Story ID, Requirement ID, User
-Story, Acceptance Criteria, Relative Effort, Dependency / Constraint, Priority,
-Priority Rationale.
+- [ ] Every story has all eight required fields: Story ID, Requirement ID, User Story, Acceptance Criteria, Relative Effort, Dependency / Constraint, Priority, Priority Rationale.
 - [ ] Every Requirement ID exists in `docs/requirements.md`.
-- [ ] Each acceptance criterion states a result another person can observe and
-check.
+- [ ] Each acceptance criterion states a result another person can observe and check.
 - [ ] The story blocks follow the Priority Order list.
-- [ ] Large or uncertain stories are marked Refine or Defer, not hidden as Move
-Forward.
-- [ ] No story or criterion names a framework, database, or screen layout, unless a
-requirement makes it a constraint.
+- [ ] Large or uncertain stories are marked Refine or Defer, not hidden as Move Forward.
+- [ ] No story or criterion names a framework, database, or screen layout, unless a requirement makes it a constraint.
 - [ ] The file renders correctly on GitHub.
 - [ ] The change is committed with a message that describes it.
